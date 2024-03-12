@@ -198,7 +198,7 @@ if selected == "Project":
                 st.error("Please answer all 20 questions before submitting.")
             else:
             # Display the button with the disabled state from session state
-                submit_button = st.button("Submit", key="Submit", disabled=st.session_state.disabled, label_visibility='collapse')
+                submit_button = st.button("Submit", key="Submit", disabled=st.session_state.disabled)
                 # Check if the button is clicked
                 if submit_button:
                     # Update session state to disable the button
