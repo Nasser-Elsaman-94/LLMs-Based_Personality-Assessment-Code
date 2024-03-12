@@ -204,13 +204,13 @@ if selected == "Project":
                     # Update session state to disable the button
                     # st.session_state.disabled = True
                     with st.spinner('Loading...'):
-                        time.sleep(3)
+                        time.sleep(2)
                     with st.spinner('In progress...'):
                         time.sleep(2)
-                    with st.spinner('The result will appear in seconds...'):
-                        time.sleep(3)
+                    with st.spinner('Please Wait, The result will appear in seconds...'):
+                        time.sleep(2)
                         st.balloons ()
-                        st.success("Thank you for completing the questionnaire!")
+                        st.success("Thank you for completing the Assessment")
                         
                         # Display merged responses
                         st.write("Your Responses:")
