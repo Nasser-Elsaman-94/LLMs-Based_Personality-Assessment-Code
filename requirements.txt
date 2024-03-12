@@ -1,0 +1,16 @@
+streamlit
+numpy
+pandas
+matplotlib
+transformers
+torch
+torchvision
+torchaudio
+gspread
+oauth2client
+streamlit-option-menu
+python-time
+streamlit-lottie
+python-dotenv
+HUGGINGFACE
+python-dotenv
