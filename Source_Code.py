@@ -46,7 +46,7 @@ st.sidebar.write (":100: To Fine-tune my model; I depended on the pretrained Mod
 my_model = "https://huggingface.co/Nasserelsaman/microsoft-finetuned-personality"
 Privacy_Policy = "https://sites.google.com/view/big5-personality-assessment/home"
 st.sidebar.write(":male-technologist: Check out My Fine-tuned model:- [Nasserelsaman/microsoft-finetuned-personality.](%s)" %my_model)
-st.sidebar.write(":lock-with-ink-pen: Please note that without collecting any personally identifiable data that may be utilized to identify users, the collected data for assessment results will be utilized for academic/ researching purposes only and under the Service Provider supervision, and for more details; check out [Privacy Policy.](%s)" %Privacy_Policy)
+st.sidebar.write(":lock_with_ink_pen: Please note that without collecting any personally identifiable data that may be utilized to identify users, the collected data for assessment results will be utilized for academic/ researching purposes only and under the Service Provider supervision. For more details; check out [Privacy Policy.](%s)" %Privacy_Policy)
 if selected == "Project":
     if show_assessment == False:
         st.write(":sparkles: _To start the assessment please make sure to activate model in the sidebar (Upper Left Arrow)_ :arrow_forward:")
