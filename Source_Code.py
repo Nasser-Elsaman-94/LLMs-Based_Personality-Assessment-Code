@@ -6,14 +6,23 @@ import torch
 import matplotlib.pyplot as plt
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import json
+import os
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import time
 
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("streamlit-ml-pa-06731684e124.json", scope)
+# Load and parse the credentials
+creds_dict = json.loads(os.getenv('GOOGLE_CREDENTIALS'))
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive"
+])
+
+# Authorize the client
 client = gspread.authorize(creds)
-spreadsheet = client.open("Streamlit ML Personality Assessment")  # Replace with your spreadsheet name
+spreadsheet = client.open("Streamlit ML Personality Assessment")
+
 
 # Sidebar
 st.sidebar.title(":hammer_and_wrench: Configuration")
