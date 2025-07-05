@@ -69,7 +69,7 @@ if selected == "Project":
         quest_link = "https://rockford.instructure.com/courses/8365/files/419203/download?verifier=dCgoMhAAmj7FnEqVb4mKBEHZ1ia3Uh4YCSBtwwLX&wrap=1"
         st.sidebar.write (":books: _Kindly note that this project is storing assessment data results for research purposes only, and to ensure from the original questions and learn how to calculate your score, check out this PDF file:-_ [The Mini-IPIP Scale (Donnellan, Oswald, Baird, & Lucas).](%s)" %quest_link)
         def personality_detection(text, threshold=0.05, endpoint= 1.0):
-            token="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"
+            token=st.secrets["HUGGINGFACE_TOKEN"]
             tokenizer = AutoTokenizer.from_pretrained("Nasserelsaman/microsoft-finetuned-personality",token=token)
             model = AutoModelForSequenceClassification.from_pretrained("Nasserelsaman/microsoft-finetuned-personality",token=token)
             
